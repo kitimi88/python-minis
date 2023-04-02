@@ -17,3 +17,38 @@
 - Python 3.10.8 or later
 - Git
 
+---
+## Installation
+1. Clone reporsitory.
+
+```bash
+$ git clone https://github.com/kitimi88/python-minis.git
+```
+
+2. Setup virtual environment.
+
+```bash
+$ py -m venv .venv
+$ .venv\scripts\activate
+```
+
+3. Install required dependecies.
+
+```bash
+$ py -m pip install -r requirements.txt
+```
+
+---
+## Note
+
+The [Currency Converter](./currency_convert.py), [Weather](./weather.py), [Chatbot](./chatbot.py) requires the following packages:
+
+| Package | Description |
+| ------- | ----------- |
+|[python-dotenv](https://pypi.org/project/python-dotenv/) |Read key-value pairs from .env file and set them as environment variables. In this sample app, those variables describe how to connect API. This package is used in the applications to load environment variables.|
+| [OpenAI API](https://pypi.org/project/openai/) | Chatbot application requires integrating with an external API for natural language processing.
+| [OpenWeatherMap API](https://home.openweathermap.org/users/sign_up) | Sign up for an API key to be able to make API to calls. 
+
+---
+## Contributions
+_Pending contribution guide._
