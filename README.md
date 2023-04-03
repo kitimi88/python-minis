@@ -2,7 +2,7 @@
 
 1. [Fibonacci](./fibonacci.py) - _The classic Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding numbers._
 2. [Birthday Countdown](./birthday_countdown.py) - _Calculate your age and number of days 'till your birthday._
-3. [Currency Converter](./currency_convert.py) - _Covert your currency in real-time._
+3. [Currency Converter](./currency_convert.py) - _Convert your currency in real-time._
 4. [Guess the number](./guess_num.py) - _A game where the computer generates a random number and the user has to guess what it is._
 5. [Guess the number v.2](./guess_num_2.py) - _A game where the computer generates a random number and the user has to guess what it is with limited attempts._
 6. [Hangman](./hangman.py) - _The classic Hangman game where users have to guess a word by guessing one letter at a time._
