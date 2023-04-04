@@ -1,5 +1,6 @@
 import requests
 import os
+import sys
 from dotenv import load_dotenv
 load_dotenv('./.env')
 
@@ -37,33 +38,24 @@ def get_city():
     else:
         print(f"Could not retrieve weather information for {city}")
         
-
-
-def app_header():
-    print('------------------------------------------------')
-    print('                     Weather                    ')
-    print('------------------------------------------------')
-    print()
-
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('                  Weather                       ')
+    print('------------------------------------------------')
     g_city = get_city()
     g_weather = get_weather(g_city)
-    print()
+    
+    while True:
+        response = input('Check another city? (Y/N): ')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-main()
-
-while True:
-
-    print('Check another city? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-        
-    elif check == 'n' or check == 'N':
-        print('\nThanks and have a great day!\n')
-        break
-    else:
-        print('\nPlease select y or n.')
-        continue
+if __name__ == '__main__':
+    main()

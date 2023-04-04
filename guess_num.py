@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 
 def guess_number():
@@ -22,36 +23,26 @@ def guess_number():
             print('\nToo HIGH! Try again.\n')
         else:
             print(f'\nAwesome! The correct answer is {secret_number} and you got it in {num_guesses} attempts.')
+            print('\n')
             break
-
-def app_header():
-    print('------------------------------------------------')
-    print('            Guess the number                    ')
-    print()
-    print('------------------------------------------------')
-    print('     MECHANICS: Guess a number from 1 - 100     ')
-    print('------------------------------------------------')
-    print()
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('           Birthday Countdown                   ')
+    print('------------------------------------------------')
     guess_num = guess_number()
-    print()
+    
+    while True:
+        response = input('Do you want to continue? (Y/N)')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-main()
-
-while True:
-
-    print('Do you want to continue? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-        
-    elif check == 'n' or check == 'N':
-        print('\nThanks and have a great day!\n')
-        break
-    else:
-        print('\nPlease select y or n.')
-        continue
-
+if __name__ == '__main__':
+    main()

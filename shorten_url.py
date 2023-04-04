@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import pyshorteners
 
 def short_url():
@@ -12,37 +13,28 @@ def short_url():
         if url_pattern.match(url):
             short_url = s.tinyurl.short(url)
             print('\nShortened URL: ', short_url)
+            print('\n')
             break
         else:
             print('\nInvalid URL. Please try again.\n')
             
-
-def app_header():
-    print('------------------------------------------------')
-    print('              URL Shortener                    ')
-    print('------------------------------------------------')
-    print()
-
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('                URL Shortener                   ')
+    print('------------------------------------------------')
     s_url = short_url()
-    print()
+    
+    while True:
+        response = input('Do you want to continue? (Y/N)')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-main()
-
-while True:
-
-    print('Do you want to continue? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-        
-    elif check == 'n' or check == 'N':
-        print('\nThanks and have a great day!\n')
-        break
-    else:
-        print('\nPlease select y or n.')
-        continue
-
-
+if __name__ == '__main__':
+    main()

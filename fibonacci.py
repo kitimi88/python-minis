@@ -1,4 +1,5 @@
 import os
+import sys
 
 def fibonacci_sequence(n):
     fib = [0, 1]
@@ -6,35 +7,30 @@ def fibonacci_sequence(n):
         fib.append(fib[i-1] + fib[i-2])
     return fib
 
-def app_header():
-    print('------------------------------------------------')
-    print('          Fibonacci Sequence                    ')
-    print('------------------------------------------------')
-    print()
-
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
-    print('Enter the number of elements you want in the Fibonnaci sequence:')
+    print('------------------------------------------------')
+    print('           Fibonacci Sequence                   ')
+    print('------------------------------------------------')
+    print('Enter the number of elements you want in the Fibonnaci sequence: ')
     num = int(input(''))
     fib_sequence = fibonacci_sequence(num)
     print('\n')
     print(fib_sequence)
     print('\n')
+    
+    while True:
+        response = input('Do you want to continue? (Y/N)')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-main()
+if __name__ == '__main__':
+    main()
 
-while True:
-
-    print('Do you want to continue? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-        
-    elif check == 'n' or check == 'N':
-        print('\nThanks for playing. Have a great day!\n')
-        break
-    else:
-        print('\nPlease select y or n.')
-        continue
 

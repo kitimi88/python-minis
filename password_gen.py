@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 import string
 
@@ -44,30 +45,25 @@ def user_input():
 
     password = generate_password(length, include_digits=include_digits, include_symbols=include_symbols)
     print("\nYour password is:", password)
-
-def app_header():
-    print('------------------------------------------------')
-    print('           Password Generator                   ')
-    print('------------------------------------------------')
-    print()
+    print('\n')
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('           Password Generator                   ')
+    print('------------------------------------------------')
     user_input()
-    print()
     
-main()
+    while True:
+        response = input('Generate another password? (Y/N)')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-while True:
-    print('Generate another password? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-    
-    elif check == 'n' or check == 'N':
-        print('\nThank you and have a great day!\n')
-        break
-    else:
-        print('\nPlase select y or n.')
-        continue
+if __name__ == '__main__':
+    main()

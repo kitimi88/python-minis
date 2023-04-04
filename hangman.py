@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 
 with open('hangman_word_list.txt','r') as f:
@@ -39,7 +40,7 @@ def play_game():
         display = display_word(word, guessed_letters)
         print(display)
         if "_" not in display:
-            print("Congratulations! You guessed the word.")
+            print("You got it! Awesome.")
             return
         letter = get_letter()
         if letter in guessed_letters:
@@ -53,32 +54,23 @@ def play_game():
             print("Sorry, that letter is not in the word.")
     print("You ran out of attempts. The word was", word)
 
-# Start the game
-# play_game()
-
-def app_header():
-    print('------------------------------------------------')
-    print('                 Hangman                        ')
-    print('------------------------------------------------')
-    print()
-
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('               The Hangman                      ')
+    print('------------------------------------------------')
     play_now = play_game()
-    print()
-
-main()
-
-while True:
-    print('Continue playing? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
     
-    elif check == 'n' or check == 'N':
-        print('\nThank you and have a great day!\n')
-        break
-    else:
-        print('\nPlase select y or n.')
-        continue
+    while True:
+        response = input('Do you want to continue? (Y/N)')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
+
+if __name__ == '__main__':
+    main()

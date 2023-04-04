@@ -10,12 +10,12 @@ openai.api_key = os.environ['OPENAI_API_KEY']
 
 def generate_response(prompt):
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        model="text-davinci-003",
         prompt=prompt,
-        max_tokens=1024,
+        max_tokens=2048,
         top_p=1,
         frequency_penalty=0.0,
-        presence_penalty=0.6,
+        presence_penalty=0.0,
         n=1,
         stop=None,
         temperature=0.9,
@@ -29,15 +29,12 @@ def generate_response(prompt):
         numbered_response += str(i+1) + ". " + line + "\n"
     return message
 
-def app_header():
-    print('------------------------------------------------')
-    print('             Welcome to ChatGPT!                ')
-    print('------------------------------------------------')
-    print()
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
+    print('------------------------------------------------')
+    print('             Welcome to ChatGPT!                ')
+    print('------------------------------------------------')
     print("Type 'bye' to exit.\n")
 
     while True:

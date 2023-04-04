@@ -1,4 +1,5 @@
 import os
+import sys
 
 def count(text):
     words = text.split()
@@ -13,29 +14,23 @@ def get_user_input():
     print("\nTotal word(s):", num_words)
     print("Total character(s):", num_chars)
 
-def app_header():
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('------------------------------------------------')
     print('           Count Words & Characters             ')
     print('------------------------------------------------')
-    print()
-
-def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
     get_user_input()
-    print()
     
-main()
+    while True:
+        response = input('Do you want to continue? (Y/N) ')
+        if response == 'y' or response == 'Y':
+            main()
+        elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select y or n.\n')
+            continue
 
-while True:
-    print('Do you want to continue? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-    
-    elif check == 'n' or check == 'N':
-        print('\nThank you and have a great day!\n')
-        break
-    else:
-        print('\nPlase select y or n.')
-        continue
+if __name__ == '__main__':
+    main()
