@@ -14,6 +14,8 @@
 * [URL Shortener](./shorten_url.py) - _Simple URL shortener._
 * [BMI calculator](./bmi_calculator.py) - _Simple Body Mass Index calculator._
 * [Encryption Tool](./encryption_tool.py) - _Encrypts plain messages using the Caesar Cipher algorithm._
+* [Token Generator](./token_generator.py) - _Generates random URL-safe string using python's secrets module._
+
 ---
 
 ## Requirements

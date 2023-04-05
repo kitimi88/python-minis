@@ -29,7 +29,7 @@ def guess_number():
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
     print('------------------------------------------------')
-    print('           Birthday Countdown                   ')
+    print('           Guess the number                     ')
     print('------------------------------------------------')
     guess_num = guess_number()
     

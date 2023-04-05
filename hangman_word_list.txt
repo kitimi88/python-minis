@@ -1,6 +1,7 @@
 vscode
 python
 django
-react
+programming
 postgresql
-apples
+science
+superproxy

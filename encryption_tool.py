@@ -31,27 +31,24 @@ def user_input():
             print('\n')
             break
 
-def app_header():
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('------------------------------------------------')
     print('        Message Encryption Tool                 ')
     print('------------------------------------------------')
-
-
-def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    app_header()
     user_input()
-main()
 
-while True:
-    print('Encrypt another message? [y/n]: ',end='')
-    check = input()
-    if check == 'y' or check == 'Y':
-        main()
-    elif check == 'n' or check == 'N':
-        print('\nThanks for playing. Have a great day!\n')
-        break
-    else:
-        print('\nPlease select y or n.')
-        continue
+    while True:
+        print('Encrypt another message? (Y/N): ',end='')
+        check = input()
+        if check == 'y' or check == 'Y':
+            main()
+        elif check == 'n' or check == 'N':
+            print('\nThanks for playing. Have a great day!\n')
+            break
+        else:
+            print('\nPlease select y or n.')
+            continue
 
+if __name__ == '__main__':
+    main()
