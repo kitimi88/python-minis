@@ -1,18 +1,19 @@
 # A collection of python mini projects
 
-1. [Fibonacci](./fibonacci.py) - _Generates sequence of numbers, in which every term in the sequence is the sum of terms before it._
-2. [Birthday Countdown](./birthday_countdown.py) - _Calculate your age and number of days 'till your birthday._
-3. [Currency Converter](./currency_convert.py) - _Real-time currency conversion tool._
-4. [Guess the number](./guess_num.py) - _Guess the random number with unlimited attempts._
-5. [Guess the number v.2](./guess_num_2.py) - _Guess the random number with LIMITED attempts._
-6. [Hangman](./hangman.py) - _A classic word-guessing game._
-7. [Password generator](./password_gen.py) - _Generate a random password of the given length, including uppercase and lowercase letters, and optionally numbers and symbols._
-8. [Word and character count](./word_count.py) - _Counts the number of words and characters._
-9. [Weather](./weather.py) - _Fetch essential weather information for a location._
-10. [Chatbot (ChatGPT)](./chatbot.py) - _Basic chatbot using OpenAI's ChatGPT._
-11. [URL Shortener](./shorten_url.py) - _Simple URL shortener._
-12. [BMI calculator](./bmi_calculator.py) - _Simple Body Mass Index calculator._
-13. [Encryption Tool](./encryption_tool.py) - _Encrypts plain messages using the Caesar Cipher algorithm._
+* [Fibonacci](./fibonacci.py) - _Generates sequence of numbers, in which every term in the sequence is the sum of terms before it._
+* [Birthday Countdown](./birthday_countdown.py) - _Calculate your age and number of days 'till your birthday._
+* [Currency Converter](./currency_convert.py) - _Real-time currency conversion tool._
+* [Guess the number](./guess_num.py) - _Guess the random number with unlimited attempts._
+* [Guess the number v.2](./guess_num_2.py) - _Guess the random number with LIMITED attempts._
+* [Hangman](./hangman.py) - _A classic word-guessing game._
+* [Password generator](./password_gen.py) - _Generate a random password of the given length, including uppercase and lowercase letters, and optionally numbers and symbols._
+* [Password generator v2](./password_gen2.py) - _Generate password with complexity levels._
+* [Word and character count](./word_count.py) - _Counts the number of words and characters._
+* [Weather](./weather.py) - _Fetch essential weather information for a location._
+* [Chatbot (ChatGPT)](./chatbot.py) - _Basic chatbot using OpenAI's ChatGPT._
+* [URL Shortener](./shorten_url.py) - _Simple URL shortener._
+* [BMI calculator](./bmi_calculator.py) - _Simple Body Mass Index calculator._
+* [Encryption Tool](./encryption_tool.py) - _Encrypts plain messages using the Caesar Cipher algorithm._
 ---
 
 ## Requirements
