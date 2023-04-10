@@ -7,20 +7,33 @@ def fibonacci_sequence(n):
         fib.append(fib[i-1] + fib[i-2])
     return fib
 
+def user_input():
+    while True:
+        try:
+            num = int(input('Enter number from 6 to 50: '))
+            break
+        except ValueError:
+            print('\nError: Input must be a number.\n')
+            return
+    
+    if num <= 5 or num >= 51:
+        print('\nError: Input between 6 to 50.\n')
+        return
+             
+    fib_sequence = fibonacci_sequence(num)
+    print()
+    print(fib_sequence)
+    print()
+
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
     print('------------------------------------------------')
     print('           Fibonacci Sequence                   ')
     print('------------------------------------------------')
-    print('Enter the number of elements you want in the Fibonnaci sequence: ')
-    num = int(input(''))
-    fib_sequence = fibonacci_sequence(num)
-    print('\n')
-    print(fib_sequence)
-    print('\n')
+    user_input()
     
     while True:
-        response = input('Do you want to continue? (Y/N)')
+        response = input('Do you want to continue (Y/N)? ')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':
@@ -32,5 +45,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
