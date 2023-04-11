@@ -23,19 +23,24 @@ def generate_password(complexity,length):
 def user_input():
     while True:
         try:
-            length = int(input("\nEnter password length: "))
+            length = int(input("\nEnter password length (min. 8 max. 64): "))
             break
         except ValueError:
             print('\nError: Password length must be a number.\n')
-            continue
+            return
     
-    complexity = input('Complexity level [1] weak, [2] medium [3] strong: ')
-    password = generate_password(length=length, complexity=complexity)
+    if length <= 7 or length >= 65:
+        print('\nError: Required length did match.\n')
+        return
 
+    
+    print('\nComplexity level:\n [1] Weak\n [2] Medium\n [3] Strong\n')
+    complexity = input('')
+    password = generate_password(length=length, complexity=complexity)
     if password is None:
         print('')
     else:
-        print(f'\nYour password is: {password}')
+        print('\nYour password is:',(password))
         print()
 
 def main():
@@ -50,6 +55,7 @@ def main():
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':
+            print('\nThank you and have a great day!\n')
             sys.exit()
         else:
             print('\nError: Please select Y or N.\n')

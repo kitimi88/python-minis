@@ -2,7 +2,7 @@ import os
 import sys
 import random
 
-with open('hangman_word_list.txt','r') as f:
+with open('eggs/word_list.txt','r') as f:
     word_list = [word.strip() for word in f.readlines()]
 
 word = random.choice(word_list)
