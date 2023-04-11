@@ -15,7 +15,8 @@
 * [BMI calculator](./bmi_calculator.py) - _Simple Body Mass Index calculator._
 * [Encryption Tool](./encryption_tool.py) - _Encrypts plain messages using the Caesar Cipher algorithm._
 * [Token Generator](./token_generator.py) - _Generates random URL-safe string using python's secrets module._
-* [Video Downloader](./video_downloader.py) - _Simple video downloader tool. By default, this will automatically create a new downloads directory._
+* [Video Downloader](./video_downloader.py) - _Simple video downloader tool. By default, this tool will automatically create a new downloads directory._
+* [Countdown Timer](./countdown_timer.py) - _Simple timer that allows the user to input a countdown time in hours, minutes, or seconds._
 
 ---
 
