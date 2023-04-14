@@ -35,5 +35,3 @@ The [requirements.txt](./requirements.txt) has the following packages:
 |[yt-dlp](https://pypi.org/project/yt-dlp/)|
 
 ---
-
-Back to [README](./README.md).
