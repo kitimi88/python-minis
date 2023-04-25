@@ -43,15 +43,16 @@ def user_input():
         else:
             print('Invalid input. Please enter y or n.')
 
-    password = generate_password(length, include_digits=include_digits, include_symbols=include_symbols)
+    password = generate_password(length, include_digits=include_digits, include_symbols=include_symbols) # type: ignore
     print("\nYour password is:", password)
     print('\n')
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Password Generator                   ')
-    print('------------------------------------------------')
+    app_name = 'Password Generator'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
     
     while True:

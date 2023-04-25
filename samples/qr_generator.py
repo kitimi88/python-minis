@@ -12,7 +12,7 @@ def qr_generator():
 
     filename = input("Enter filename including extension (.jpg, .png): ")
     
-    path_option = input("Do you want to specify a file path to save the QR code? (y/n) ")
+    path_option = input("Do you want to specify a file path to save the QR code (Y/N)? ")
     if path_option == 'y' or path_option == 'Y':
         path = input("Enter file path to save the QR code: ")
         filename = path + "/" + filename

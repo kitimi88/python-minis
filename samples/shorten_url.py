@@ -13,20 +13,20 @@ def short_url():
         if url_pattern.match(url):
             short_url = s.tinyurl.short(url)
             print('\nShortened URL: ', short_url)
-            print('\n')
             break
         else:
             print('\nInvalid URL. Please try again.\n')
             
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('                URL Shortener                   ')
-    print('------------------------------------------------')
-    s_url = short_url()
+    app_name = 'URL Shortener'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
+    short_url()
     
     while True:
-        response = input('Do you want to continue? (Y/N)')
+        response = input('\nDo you want to continue? (Y/N)')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':

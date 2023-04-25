@@ -2,7 +2,7 @@ import os
 import sys
 import random
 
-with open('eggs/word_list.txt','r') as f:
+with open('eggs/word_list.txt','r') as f: # (filepath/word_list.txt)
     word_list = [word.strip() for word in f.readlines()]
 
 word = random.choice(word_list)
@@ -35,8 +35,8 @@ def play_game():
     word = choose_word(word_list)
     guessed_letters = set()
     attempts = 6
+    print("The word you need to guess has", len(word), "letters.")
     while attempts > 0:
-        print("Attempts left:", attempts)
         display = display_word(word, guessed_letters)
         print(display)
         if "_" not in display:
@@ -44,25 +44,28 @@ def play_game():
             return
         letter = get_letter()
         if letter in guessed_letters:
-            print("You already guessed that letter!")
+            print("You already guessed that letter. You still have",attempts, "attempts left.")
         elif letter in word:
             guessed_letters.add(letter)
-            print("Good guess!")
+            print("Good guess! You still have",attempts, "attempts left.")         
         else:
             attempts -= 1
             guessed_letters.add(letter)
-            print("Sorry, that letter is not in the word.")
-    print("You ran out of attempts. The word was", word)
+            print("Sorry, that letter is not in the word. You only have",attempts, "attempts left")
+
+    print(f"\nYou ran out of attempts. The correct answer is {word}.")
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('               The Hangman                      ')
-    print('------------------------------------------------')
-    play_now = play_game()
+    app_name = 'The Hangman'
+    app_name = 'Guess the number v2'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
+    play_game()
     
     while True:
-        response = input('Do you want to continue? (Y/N)')
+        response = input('\nDo you want to continue? (Y/N)')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':

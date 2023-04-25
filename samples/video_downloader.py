@@ -35,10 +35,10 @@ def video_downloader():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('              Video Dowloader                   ')
-    print('------------------------------------------------')
-    print()
+    app_name = 'Video Dowloader'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     video_downloader()
 
     while True:

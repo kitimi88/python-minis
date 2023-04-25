@@ -1,7 +1,0 @@
-vscode
-python
-django
-programming
-postgresql
-science
-superproxy

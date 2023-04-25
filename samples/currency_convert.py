@@ -1,6 +1,7 @@
 import os
 import sys
 import requests
+import datetime
 
 def convert_currency(amount, from_currency, to_currency):
 
@@ -16,22 +17,24 @@ def convert_currency(amount, from_currency, to_currency):
 
 def user_input():
     amount = float(input("Enter amount: "))
-    from_currency = input("Enter the currency to convert FROM (e.g. USD): ").upper()
-    to_currency = input("Enter the currency to convert TO (e.g. php): ").upper()
-
+    from_currency = input("Currency to convert FROM (e.g. USD): ").upper()
+    to_currency = input("Currency to convert TO (e.g. php): ").upper()
+    today = datetime.date.today()
     result = convert_currency(amount, from_currency, to_currency)
     print('\n')
-    print(f"{amount:.2f} {from_currency} is equal to {result:.2f} {to_currency}")
+    print(f"As of {today}:")
+    print(f"{from_currency} {amount:.2f} is equivalent to {to_currency} {result:.2f}")
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Currency Converter                   ')
-    print('------------------------------------------------')
+    app_name = 'Currency Converter'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
     
     while True:
-        response = input('Do you want to continue? (Y/N) ')
+        response = input('\nDo you want to continue? (Y/N) ')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':

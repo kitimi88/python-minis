@@ -1,4 +1,5 @@
 import os
+import sys
 
 def caesar_cipher(message,shift):
 
@@ -28,24 +29,24 @@ def user_input():
         else:
             encrypted_message = caesar_cipher(plain_message.upper(),shift)
             print('\nYour encrypted message: ', encrypted_message)
-            print('\n')
             break
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('        Message Encryption Tool                 ')
-    print('------------------------------------------------')
+    app_name = 'Message Encryption Tool'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
 
     while True:
-        print('Encrypt another message? (Y/N): ',end='')
+        print('\nEncrypt another message? (Y/N): ',end='')
         check = input()
         if check == 'y' or check == 'Y':
             main()
         elif check == 'n' or check == 'N':
             print('\nThanks for playing. Have a great day!\n')
-            break
+            sys.exit()
         else:
             print('\nPlease select y or n.')
             continue

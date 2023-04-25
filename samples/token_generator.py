@@ -28,9 +28,10 @@ def user_input():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('               Token Generator                  ')
-    print('------------------------------------------------')
+    app_name = 'Token Generator'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
 
     while True:

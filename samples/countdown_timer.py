@@ -23,6 +23,7 @@ def user_input():
     hours = get_positive_input("Enter hours: ")
     minutes = get_positive_input("Enter minutes: ")
     seconds = get_positive_input("Enter seconds: ")
+    print()
     
     count_time = countdown_timer(hours, minutes, seconds)
 
@@ -36,10 +37,10 @@ def user_input():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('              Countdown Timer                   ')
-    print('------------------------------------------------')
-    print()
+    app_name = 'Countdown Timer'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
     
     while True:

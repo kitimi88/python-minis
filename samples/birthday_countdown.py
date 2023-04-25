@@ -2,13 +2,9 @@ import os
 import sys
 import datetime
 
-
-# Ask user for their birthday
 def get_user_birthday():
     birthday_str = input("Please enter your birthday (YYYY-MM-DD): ")
     birthday = datetime.datetime.strptime(birthday_str, "%Y-%m-%d").date()
-
-    # Calculate days until next birthday and age
 
     today = datetime.date.today()
     next_birthday = datetime.date(today.year, birthday.month, birthday.day)
@@ -17,23 +13,24 @@ def get_user_birthday():
     days_until_birthday = (next_birthday - today).days
     age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
 
-    # Display countdown and age message
+
     if days_until_birthday == 0:
-        print("Happy {}th birthday!".format(age))
+        print("Happy {} st/nd/th birthday!".format(age))
     elif days_until_birthday == 1:
-        print("Your {}th birthday is tomorrow!".format(age))
+        print("Your {} st/nd/th birthday is tomorrow!".format(age))
     else:
-        print("Your {}th birthday is in {} days.".format(age, days_until_birthday))
+        print("Your {} st/nd/th birthday is in {} days.".format(age, days_until_birthday))
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Birthday Countdown                   ')
-    print('------------------------------------------------')
+    app_name = 'Birthday Countdown'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     get_user_birthday()
     
     while True:
-        response = input('Do you want to continue? (Y/N) ')
+        response = input('\nDo you want to continue? (Y/N) ')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':

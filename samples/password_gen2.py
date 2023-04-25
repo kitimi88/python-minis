@@ -12,9 +12,12 @@ def generate_password(complexity,length):
             characters = string.ascii_letters + string.digits
         elif complexity == '3': # strong
             characters = string.ascii_letters + string.digits + string.punctuation
+        elif complexity == '4':
+            print('\nThank you and have a great day!\n')
+            sys.exit()
         else:
             
-            print('\nError: Please choose [1] weak, [2] medium [3] strong.\n')
+            print('\nError: Invalid Choice.')
             break
 
         password = ''.join(random.choice(characters) for _ in range(length))
@@ -30,13 +33,20 @@ def user_input():
             return
     
     if length <= 7 or length >= 65:
-        print('\nError: Required length did match.\n')
+        print('\nError: Invalid range.\n')
         return
 
+    print("Select complexity level:")
+    print("[1] Weak")
+    print("[2] Medium")
+    print("[3] Strong")
+    print("[4] Quit")
+    choice_complexity = input('Your choice: ')
     
-    print('\nComplexity level:\n [1] Weak\n [2] Medium\n [3] Strong\n')
-    complexity = input('')
-    password = generate_password(length=length, complexity=complexity)
+    if choice_complexity not in ("1","2","3","4"):
+        pass
+        
+    password = generate_password(length=length, complexity=choice_complexity)
     if password is None:
         print('')
     else:
@@ -45,9 +55,10 @@ def user_input():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Password generator v2                ')
-    print('------------------------------------------------')
+    app_name = 'Password generator v2'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
 
     while True:

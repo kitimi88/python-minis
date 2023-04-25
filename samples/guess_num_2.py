@@ -20,10 +20,11 @@ def guess_number():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('             Guess the number v2                ')
-    print('------------------------------------------------')
-    guess_num = guess_number()
+    app_name = 'Guess the number v2'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
+    guess_number()
     
     while True:
         response = input('Do you want to continue? (Y/N)')

@@ -18,32 +18,36 @@ See [DIRECTORY](./DIRECTORY.md) for better navigation project overview.
 
 
 ## Installation
+**IMPORTANT** - Some projects  may require external packages or special API call instructions to be able to function properly. Click [here](./DIRECTORY.md#note) to know more.
 
-**IMPORTANT** - Some projects such as
-[Currency Converter](./currency_convert.py), [Weather](./weather.py), [Chatbot](./chatbot.py),[Video Downloader](./video_downloader.py),[QR Code generator](./qr_generator.py) may require external packages or special API instructions to be able to function properly. Click [here](./DIRECTORY.md#note) to know more.
 
-1. Clone entire reporsitory.
+1. **Clone entire reporsitory.**
 
-```bash
-$ git clone https://github.com/kitimi88/python-minis.git
+```
+git clone https://github.com/kitimi88/python-minis.git
 ```
 
-2. Setup virtual environment.
+2. **Setup virtual environment.**
 
-```bash
-$ py -m venv .venv
-$ .venv\scripts\activate
 ```
-3. Upgrade pip (Whenever necessary).
+py -m venv .venv
+```
+3. **Activate virtual environment.**
+```
+.venv\scripts\activate.ps1
+```
+
+
+4. **Upgrade pip (Whenever necessary).**
 ```bash
 $ py -m pip install --upgrade pip
 ```
 
 
-4. Install required dependecies.
+5. **Install required dependecies.**
 
-```bash
-$ py -m pip install -r requirements.txt
+```
+py -m pip install --upgrade -r requirements.txt
 ```
 
 ---

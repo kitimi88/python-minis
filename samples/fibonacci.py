@@ -1,6 +1,9 @@
 import os
 import sys
 
+error_msg = 'Error: Input must be a number.'
+error_msg2 = 'Error: Invalid range.'
+
 def fibonacci_sequence(n):
     fib = [0, 1]
     for i in range(2, n):
@@ -27,9 +30,10 @@ def user_input():
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Fibonacci Sequence                   ')
-    print('------------------------------------------------')
+    app_name = 'Fibonacci Sequence'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     user_input()
     
     while True:

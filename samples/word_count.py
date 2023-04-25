@@ -9,20 +9,21 @@ def count(text):
 
 def get_user_input():
 
-    user_input = input("Enter some text: ")
+    user_input = input("Enter text: ")
     num_words, num_chars = count(user_input)
     print("\nTotal word(s):", num_words)
     print("Total character(s):", num_chars)
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('------------------------------------------------')
-    print('           Count Words & Characters             ')
-    print('------------------------------------------------')
+    app_name = 'Count Words & Characters'
+    print(f'{"-" * 48}')
+    print(f'{" " * 12}{app_name}{" " * 12}')
+    print(f'{"-" * 48}')
     get_user_input()
     
     while True:
-        response = input('Do you want to continue? (Y/N) ')
+        response = input('\nDo you want to continue? (Y/N) ')
         if response == 'y' or response == 'Y':
             main()
         elif response == 'n' or response == 'N':
