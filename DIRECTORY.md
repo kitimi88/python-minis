@@ -12,6 +12,7 @@
 * [Word and character count](./samples/word_count.py) - _Counts the number of words and characters._
 * [Weather](./samples/weather.py) - _Fetch essential weather information for a location._
 * [Chatbot (ChatGPT)](./samples/chatbot.py) - _Basic chatbot using OpenAI's ChatGPT._
+* [Chatbot v2](./samples/chatbot_2.py) - _Basic chatbot using OpenAI's ChatGPT using Chat Completions._
 * [URL Shortener](./samples/shorten_url.py) - _Simple URL shortener._
 * [BMI calculator](./samples/bmi_calculator.py) - _Simple Body Mass Index calculator._
 * [Message Encryption Tool](./samples/encryption_tool.py) - _Encrypts plain messages using the Caesar Cipher algorithm._
