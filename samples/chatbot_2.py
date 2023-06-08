@@ -2,11 +2,14 @@ import os
 import sys
 import openai
 import textwrap
+from dotenv import load_dotenv
+load_dotenv('./.env')
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.environ['OPENAI_API_KEY']
+
 MODEL = "gpt-3.5-turbo"
 
-messages = [{"role": "system", "content": "You are a friendly and helpfull assistant."}]
+messages = [{"role": "system", "content": "You are a friendly and helpful assistant."}]
 
 def chat_completion():
     while True:
